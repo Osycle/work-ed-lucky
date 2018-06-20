@@ -433,14 +433,12 @@ function estel_tm_animate_text(){
 $(document).ready(function () {
     
     $('[data-id=click]').click(function () {
-
+    	
     		var li = $(this).closest("li").eq(0);
         var definition = li.find(".definition");
 
         li.siblings().find(".definition").slideUp(800)
         definition.slideToggle(800);
-
-	      //console.log( $(this).attr("id"), textContent )
         	
       	li.siblings().addBack().removeClass("is-selected");
         li.addClass("is-selected");
