@@ -275,16 +275,14 @@ svg {
           font-family: Montserrat;
           font-weight: 600;
           font-size: 20px; }
-    .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 {
-      list-style: square outside !important; }
-      .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a {
-        display: block;
-        padding: 5px 0;
-        font-size: 1em; }
-        .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a:hover {
-          color: #a446a7; }
-        .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a:before {
-          content: "- "; }
+    .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a {
+      display: block;
+      padding: 5px 0;
+      font-size: 1em; }
+      .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a:hover {
+        color: #a446a7; }
+      .estel_tm_mobile_menu_wrap .mob_menu .sub-menu-1 a:before {
+        content: "- "; }
 
 .estel_tm_trigger {
   position: absolute;
