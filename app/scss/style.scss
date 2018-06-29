@@ -30,8 +30,17 @@ $black_10: rgba(0,0,0,.1);
 $color_monza_approx: #bc0127;
 $color_monza_20_approx: rgba(188,1,39,.2);
 
-$color-1: $color_violet_eggplant_approx;
-
+$color-1: #a446a7;
+$color-2: darken(#a446a7, 20%);
+$color-gray-1: #787878;
+.color-1{
+	color: $color-1;
+}
+.parag-gray{
+	p{
+		color: $color-gray-1;
+	}
+}
 //fonts
 $font_0: Open Sans;
 $font_1: Montserrat;
@@ -174,7 +183,7 @@ svg {
 		.estel_tm_navigation_wrap {
 			padding: 24px 0;
 			.menu > ul > li {
-				a {
+				> a {
 					color: $white;
 					&:hover {
 						color: $color_violet_eggplant_approx;
@@ -204,12 +213,6 @@ svg {
 		@extend %extend_2;
 		position: relative;
 	}
-	.logo {
-		position: absolute;
-		left: 0;
-		top: -35px;
-		width: 170px;
-	}
 	.nav_list_wrap {
 		width: 100%;
 		height: auto;
@@ -224,31 +227,6 @@ svg {
 		position: absolute;
 		right: 0;
 		top: 0;
-	}
-	.menu > ul {
-		margin: 0;
-		list-style-type: none;
-		> li {
-			margin: 0 30px 0 0;
-			display: inline-block;
-			a {
-				text-decoration: none;
-				color: $white;
-				font-family: $font_0;
-				text-transform: uppercase;
-				font-size: 14px;
-				font-weight: 400;
-				display: inline-block;
-				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-				transition: all .3s ease;
-				&:hover {
-					color: $color_violet_eggplant_approx;
-				}
-			}
-			&.active a {
-				color: $color_violet_eggplant_approx;
-			}
-		}
 	}
 	.social_icons_wrap > ul {
 		margin: 0;
@@ -273,9 +251,102 @@ svg {
 		}
 	}
 }
+.logo {
+	position: absolute;
+	left: 0;
+	top: -35px;
+	width: 170px;
+}
+//MENU
+.menu {
+	> ul:not([class*="sub-menu"]) {
+		margin: 0;
+		list-style-type: none;
+		> li {
+			margin: 0 7px;
+			display: inline-block;
+			> a {
+				text-decoration: none;
+				color: $white;
+				font-family: $font_0;
+				text-transform: uppercase;
+				font-size: 0.85em;
+				font-weight: 400;
+				display: inline-block;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all .3s ease;
+				&:hover {
+					color: $color_violet_eggplant_approx;
+				}
+			}
+			&.active a {
+				color: $color_violet_eggplant_approx;
+			}
+			&:hover{
+				.sub-menu-1{
+					transform: inherit;
+					opacity: 1;
+					//transition: transform 0.3s ease-in-out, scale 0.3s ease 0.0s;
+					visibility: visible;
+					li{
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	ul[class*="sub"]{
+		visibility:  hidden;
+		position: absolute;
+		transition: opacity 0.3s ease-in-out,
+								all 0.3s ease-in-out;
+		opacity: 0;
+		padding: 25px 25px;
+		font-size: 1em;
+		font-weight: 500;
+		z-index: 2;
+		line-height: 75%;
+		background-color: rgba($color-1, 0.9);
+		color: inherit;
+		list-style-position: inside;
+		list-style-type: disc;
+		color: white;
+		li{
+			margin: 0;
+		}
+	}
+	.sub-menu-1{
+		white-space: normal;
+		width: 180px;
+		transform: matrix(1,0,0,1,0,-10) scaleY(0) scaleX(0.8);
+		transform-origin: 40% 0;
+    overflow: hidden;
+		li{
+			text-align: left;
+			width: 100%;
+		}
+		a{
+			color: white;
+			text-transform: uppercase;
+			font-weight: 500;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease-in-out;
+			padding: 5px 0;
+			white-space: nowrap;
+			&:hover{
+				color: lighten($color-1, 20%);
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
 .estel_tm_mobile_menu_wrap {
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	clear: both;
 	float: left;
 	background-color: $black_95;
@@ -287,7 +358,8 @@ svg {
 	box-sizing: border-box;
 	.mob_menu {
 		width: 100%;
-		height: auto;
+		height: calc(100vh - 150px);
+		overflow: auto;
 		clear: both;
 		float: left;
 		//Instead of the line below you could use @include box-sizing($bs)
@@ -306,6 +378,23 @@ svg {
 					font-family: $font_1;
 					font-weight: 600;
 					font-size: 20px;
+				}
+			}
+		}
+		.sub-menu-1{
+			list-style: square outside !important;
+			li{
+				
+			}
+			a{
+				display: block;
+				padding: 5px 0;
+				font-size: 1em;
+				&:hover{
+					color: $color-1;
+				}
+				&:before{
+					content: "- ";
 				}
 			}
 		}
@@ -567,7 +656,7 @@ svg {
 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 		transform: translate(-50%,-50%);
 		z-index: 20;
-		//max-width: 50%;
+		max-width: 45%;
 		width: 60%;
 	}
 	.hero_title {
@@ -656,7 +745,7 @@ svg {
 			border: 1px solid $color_cardinal_pink_approx;
 			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 			border-radius: 100%;
-			animation: secdownmoving 1000ms linear 0s infinite;
+			/* animation: secdownmoving 1000ms linear 0s infinite; */
 			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 			transition: all .3s ease;
 		}
@@ -1104,15 +1193,15 @@ svg {
 }
 #plus{
 	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		bottom: 0;
-		background-color: rgba(black, 0.5);
-	}
+	// &:before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 1px;
+	// 	bottom: 0;
+	// 	background-color: rgba(black, 0.5);
+	// }
 }
 .estel_tm_plus_total_wrap {
 	width: 100%;
@@ -1478,7 +1567,7 @@ svg {
 			right: 0;
 			bottom: 0;
 			opacity: 1;
-			background-color: rgba(white, 0.16);
+			//background-color: rgba(white, 0.16);
 		}
 	}
 
@@ -1648,7 +1737,7 @@ svg {
 
 
 
-//estel_tm_contact_wrap
+//contact
 .estel_tm_contact_wrap {
 	max-width: 830px;
 	height: auto;
@@ -1742,33 +1831,39 @@ svg {
 		text-align: center;
 	}
 }
+
+//footer
 .estel_tm_footer_wrap {
+	background-image: $url_3;
 	width: 100%;
+	background-position: center 45%;
 	height: auto;
 	clear: both;
 	float: left;
 	text-align: center;
 	background-color: $color_shark_approx;
-	padding: 25px;
+	padding-bottom: 60px;
+	padding-top: 120px;
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
 	p {
 		color: $white;
 		a {
-			text-decoration: none;
-			color: $white;
+			color: $color-1;
 			font-family: $font_1;
 			font-weight: 600;
 			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 			transition: all .3s ease;
-			&:hover {
-				color: $color_alizarin_crimson_approx;
+			&:hover{
+				text-decoration: none;
 			}
+
 		}
 	}
 }
 .estel_tm_footer_top_wrap {
 	display: inline-block;
+	text-align:left;
 	width: 100%;
 }
 .footer_logo {
@@ -1784,20 +1879,23 @@ svg {
 	display: inline-block;
 	float: left;
 	ul {
-		list-style: none;
-		margin-top: 35px;
+		position: relative;
+		column-count: 2;
 		li {
-			display: inline-block;
-			margin-right: 15px;
+			position: relative;
+			list-style-position: inside;
+			list-style-image: url('../images/list-icon-1.png');
+			//margin-right: 15px;
 			a {
 				color: $white;
 				text-decoration: none;
 				&:hover {
-					color: $color_violet_eggplant_approx;
+					text-decoration: underline;
+					color: $color-1;
 				}
 			}
 			&.active a {
-				color: $color_violet_eggplant_approx;
+				color: $color-1;
 			}
 		}
 	}
@@ -1808,6 +1906,19 @@ svg {
 	display: inline-block;
 	float: left;
 	text-align: right;
+	a.number_phone{
+		color: white;
+		border: 1px solid white;
+	}
+}
+.dev{
+	@media (max-width:991px) {
+		display: none;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+	}
 }
 .estel_tm_to_top_wrap {
 	position: fixed;
@@ -1847,7 +1958,7 @@ svg {
 			font-family: $font_2;
 			font-size: 24px;
 			color: $white;
-			animation: secdownmoving 1000ms linear 0s infinite;
+			/* animation: secdownmoving 1000ms linear 0s infinite; */
 			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 			transition: all .3s ease;
 		}
@@ -2087,7 +2198,7 @@ a.number_phone {
 	font-weight: bold;
 	text-decoration: none;
 	border: 1px solid $color_fuchsia_pink_approx;
-	padding: 10px 25px;
+	padding: 10px 15px;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 25px;
 	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
@@ -2410,3 +2521,32 @@ html{
 .hide{
 	display: none;
 }
+
+//about-video
+.about-video{
+	.video-content{
+		iframe{
+			width: 100%;
+			height: 570px;
+		}
+		@media (max-width: 991px) {
+			iframe{
+				width: 90%;
+				height: 180px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+@import "_mixins.scss";
+@import "_helper.scss";
