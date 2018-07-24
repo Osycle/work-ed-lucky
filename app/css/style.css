@@ -1,6 +1,12 @@
 .color-1 {
   color: #a446a7; }
 
+.color-2 {
+  color: #5d285f; }
+
+.color-3 {
+  color: #e958d6; }
+
 .parag-gray p {
   color: #787878; }
 
@@ -429,8 +435,8 @@ svg {
     color: #e958d6;
     font-family: Times New Roman;
     font-size: 50px;
+    margin-bottom: 10px;
     font-weight: bold;
-    margin-bottom: 20px;
     line-height: 1;
     text-transform: uppercase; }
 
@@ -513,13 +519,12 @@ svg {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 20;
-    max-width: 45%;
-    width: 60%; }
+    max-width: 45%; }
   .estel_tm_universal_box_wrap .hero_title {
     position: relative;
     text-align: center;
     background: rgba(0, 0, 0, 0.2);
-    padding: 20px 50px; }
+    padding: 20px 30px; }
     .estel_tm_universal_box_wrap .hero_title:before {
       content: '';
       background: rgba(0, 0, 0, 0.2);
@@ -2059,9 +2064,6 @@ input:focus {
     min-width: 75%; }
   .estel_tm_universal_box_wrap .hero_title {
     padding: 20px 5px; }
-  .estel_tm_hero_header .hero_title h2.first {
-    font-size: 30px;
-    margin-bottom: 20px; }
   .estel_tm_hero_header .hero_title p {
     font-size: 16px; }
   .estel_tm_hero_header .hero_title span {
@@ -2209,6 +2211,26 @@ html {
   .about-video .video-content iframe {
     width: 90%;
     height: 180px; } }
+
+.clearfix:before, #catalog-article ul.total li:before, .clearfix:after, #catalog-article ul.total li:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after, #catalog-article ul.total li:after {
+  clear: both; }
+
+a, p {
+  color: inherit; }
+
+#catalog-article img.svg {
+  width: auto;
+  height: auto; }
+
+#catalog-article ul.total {
+  text-align: center; }
+  #catalog-article ul.total li {
+    float: none;
+    display: inline-block; }
 
 /*
 		_helper.scss	
@@ -4263,6 +4285,15 @@ html .p-r-120 {
     margin-left: 91.66667%; }
   .col-lg-offset-12 {
     margin-left: 100%; } }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.fs-2x {
+  font-size: 2em; }
+
+.fs-1-5x {
+  font-size: 1.5em; }
 
 [class*="pie-cells"] {
   margin-left: -15px;

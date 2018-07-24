@@ -12,7 +12,6 @@ $black_20: rgba(0, 0, 0, 0.2);
 $color_dove_gray_approx: #6b6b6b;
 $color_cardinal_pink_approx: #801671;
 $black_30: rgba(0, 0, 0, 0.3);
-$color_orchid_approx: #e958d6;
 $color_black_approx: #010101;
 $color_log_cabin_20_approx: rgba(32, 32, 32, 0.2);
 $color_gallery_approx: #eee;
@@ -32,10 +31,12 @@ $color_monza_20_approx: rgba(188,1,39,.2);
 
 $color-1: #a446a7;
 $color-2: darken(#a446a7, 20%);
+$color-3: #e958d6;
 $color-gray-1: #787878;
-.color-1{
-	color: $color-1;
-}
+.color-1{color: $color-1;}
+.color-2{color: $color-2;}
+.color-3{color: $color-3;}
+
 .parag-gray{
 	p{
 		color: $color-gray-1;
@@ -56,7 +57,7 @@ $url_4: url(../img/about/2.jpg);
 $url_5: url(../img/hero/1.jpg);
 
 
-$color-scroll: $color_orchid_approx;
+$color-scroll: $color-3;
 
 
 
@@ -555,11 +556,11 @@ svg {
 			text-transform: none;
 		}
 		h2.first {
-			color: $color_orchid_approx;
+			color: $color-3;
 			font-family: $font_3;
 			font-size: 50px;
+			margin-bottom: 10px;
 			font-weight: bold;
-			margin-bottom: 20px;
 			line-height: 1;
 			text-transform: uppercase;
 		}
@@ -653,13 +654,13 @@ svg {
 		transform: translate(-50%,-50%);
 		z-index: 20;
 		max-width: 45%;
-		width: 60%;
+		//width: 60%;
 	}
 	.hero_title {
 		position: relative;
 		text-align: center;
 		background: $black_20;
-		padding: 20px 50px;
+		padding: 20px 30px;
 		&:before {
 			content: '';
 			background: $black_20;
@@ -965,7 +966,7 @@ svg {
 	.title_wrap {
 		text-align: center;
 		h2 {
-			color: $color_orchid_approx;
+			color: $color-3;
 			font-size: 32px;
 			font-weight: bold;
 			display: inline-block;
@@ -990,7 +991,7 @@ svg {
 			}
 			&:after {
 				content: ' +';
-				color: $color_orchid_approx;
+				color: $color-3;
 				position: absolute;
 				bottom: -27px;
 				left: 50%;
@@ -1315,7 +1316,7 @@ svg {
 			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 			transition: all .5s ease;
 			span {
-				color: $color_orchid_approx;
+				color: $color-3;
 				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 				transition: all .5s ease;
 			}
@@ -2397,7 +2398,7 @@ input{
 	.estel_tm_about_wrap.homepage_second .rightbox{padding-left: 0px;}
 	.estel_tm_universal_box_wrap .hero_box {max-width: 100%;min-width: 75%;}
 	.estel_tm_universal_box_wrap .hero_title {padding: 20px 5px;}
-	.estel_tm_hero_header .hero_title h2.first {font-size: 30px;margin-bottom: 20px; }
+	//.estel_tm_hero_header .hero_title h2.first {font-size: 30px;margin-bottom: 5px; }
     .estel_tm_hero_header .hero_title p { font-size: 16px;}
     .estel_tm_hero_header .hero_title span {font-size: 14px;}
     .hero_form .contact_form .wrap {width: 100%;float: none;margin-bottom: 10px;}
@@ -2535,8 +2536,33 @@ html{
 }
 
 
+.clearfix{
+	&:before, &:after {	
+  	content: " ";
+  	display: table; 
+	}
+	&:after {
+  	clear: both; 
+	}
+}
 
-
+a, p{
+	color: inherit;
+}
+#catalog-article{
+	img.svg{
+		width: auto;
+		height: auto;
+	}
+	ul.total{
+		text-align: center;
+		li{
+			@extend .clearfix;
+			float: none;
+			display: inline-block;
+		}
+	}
+}
 
 
 
