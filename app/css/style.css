@@ -7,6 +7,21 @@
 .color-3 {
   color: #e958d6; }
 
+.color-4 {
+  color: #801671; }
+
+.bg-color-1 {
+  background-color: #a446a7; }
+
+.bg-color-2 {
+  background-color: #5d285f; }
+
+.bg-color-3 {
+  background-color: #e958d6; }
+
+.bg-color-4 {
+  background-color: #801671; }
+
 .parag-gray p {
   color: #787878; }
 
@@ -106,7 +121,7 @@ svg {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .estel_tm_header.scroll {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #78379f;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
     .estel_tm_header.scroll .estel_tm_navigation_wrap {
@@ -466,8 +481,6 @@ svg {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center; }
-    .estel_tm_universal_box_wrap .overlay_image.hero {
-      background-image: url(../images/slide-1.jpg); }
     .estel_tm_universal_box_wrap .overlay_image.testimonial {
       background-image: url(../img/jarallax/1.jpg); }
   .estel_tm_universal_box_wrap .overlay_video {
@@ -935,7 +948,7 @@ svg {
   height: auto;
   clear: both;
   float: left;
-  margin-top: 60px;
+  margin-top: 75px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .estel_tm_list_wrap > ul.total {
@@ -960,9 +973,7 @@ svg {
         -o-transition: all .8s ease;
         transition: all .8s ease; }
       .estel_tm_list_wrap > ul.total > li:hover .inner_list {
-        border: 1px solid rgba(128, 22, 113, 0.2);
-        -webkit-box-shadow: 0 0 15px rgba(128, 22, 113, 0.2);
-        box-shadow: 0 0 15px rgba(128, 22, 113, 0.2); }
+        border: 1px solid rgba(128, 22, 113, 0.2); }
         .estel_tm_list_wrap > ul.total > li:hover .inner_list .service_icon .service_icon_hover {
           opacity: 1; }
         .estel_tm_list_wrap > ul.total > li:hover .inner_list .service_title h3 {
@@ -1279,11 +1290,11 @@ svg {
       color: #eee;
       font-size: 11px; }
 
-.estel_tm_section_news {
-  min-height: 100vh;
-  background-color: #333;
+.advantages {
+  min-height: 85vh;
+  background-color: black;
   position: relative; }
-  .estel_tm_section_news .bg-wrapper {
+  .advantages .bg-wrapper {
     pointer-events: none;
     height: 999px;
     position: absolute;
@@ -1291,14 +1302,13 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(../images/bg.jpg);
     background-position: center top;
     -webkit-background-size: 100% 100%;
     background-size: 100%;
     background-repeat: no-repeat;
     opacity: 1;
     background-color: #000; }
-    .estel_tm_section_news .bg-wrapper:before {
+    .advantages .bg-wrapper:before {
       content: '';
       pointer-events: none;
       height: inherit;
@@ -1309,13 +1319,13 @@ svg {
       bottom: 0;
       opacity: 1; }
 
-.estel_tm_section_news_overlay {
+.advantages_overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0; }
-  .estel_tm_section_news_overlay:after {
+  .advantages_overlay:after {
     content: '';
     position: absolute;
     top: 0;
@@ -1324,7 +1334,7 @@ svg {
     bottom: 0;
     background: rgba(0, 0, 0, 0.2); }
 
-.estel_tm_news_wrap {
+.advantages-wrapper {
   width: 100%;
   height: auto;
   clear: both;
@@ -1332,12 +1342,12 @@ svg {
   margin-bottom: 70px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .estel_tm_news_wrap .estel_tm_list_wrap .inner_list {
+  .advantages-wrapper .estel_tm_list_wrap .inner_list {
     background: none;
     -webkit-border-radius: 0;
     border-radius: 0;
     text-align: center; }
-  .estel_tm_news_wrap .estel_tm_list_wrap > ul.total > li .inner_list {
+  .advantages-wrapper .estel_tm_list_wrap > ul.total > li .inner_list {
     width: 100%;
     height: auto;
     clear: both;
@@ -1351,7 +1361,7 @@ svg {
     -webkit-transition: all .8s ease;
     -o-transition: all .8s ease;
     transition: all .8s ease; }
-  .estel_tm_news_wrap .estel_tm_list_wrap ul.total > li .definition {
+  .advantages-wrapper .estel_tm_list_wrap ul.total > li .definition {
     -webkit-transition: -webkit-transform 0.81s ease;
     transition: -webkit-transform 0.81s ease;
     -o-transition: transform 0.81s ease;
@@ -1363,18 +1373,18 @@ svg {
     -webkit-transform: scale(0.3);
     -ms-transform: scale(0.3);
     transform: scale(0.3); }
-  .estel_tm_news_wrap .estel_tm_list_wrap ul.total > li.is-selected .definition {
+  .advantages-wrapper .estel_tm_list_wrap ul.total > li.is-selected .definition {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-  .estel_tm_news_wrap .title_holder {
+  .advantages-wrapper .title_holder {
     margin-bottom: 18px; }
-    .estel_tm_news_wrap .title_holder h3 {
+    .advantages-wrapper .title_holder h3 {
       color: #fff;
       font-size: 14px;
       line-height: 1.4;
       font-family: Open Sans; }
-      .estel_tm_news_wrap .title_holder h3 a {
+      .advantages-wrapper .title_holder h3 a {
         text-decoration: none;
         color: #fff;
         font-size: 22px;
@@ -1382,13 +1392,13 @@ svg {
         -webkit-transition: all .3s ease;
         -o-transition: all .3s ease;
         transition: all .3s ease; }
-        .estel_tm_news_wrap .title_holder h3 a:hover {
+        .advantages-wrapper .title_holder h3 a:hover {
           color: #ed2629; }
-  .estel_tm_news_wrap .read_more span {
+  .advantages-wrapper .read_more span {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #764a72;
+    background-color: #801671;
     padding: 7px 35px;
     display: inline-block;
     font-weight: 500;
@@ -1397,13 +1407,13 @@ svg {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease; }
-  .estel_tm_news_wrap .read_more a:hover {
+  .advantages-wrapper .read_more a:hover {
     background-color: #555; }
-  .estel_tm_news_wrap .date_wrap p {
+  .advantages-wrapper .date_wrap p {
     color: #eee;
     font-family: Open Sans;
     font-weight: 500; }
-    .estel_tm_news_wrap .date_wrap p a {
+    .advantages-wrapper .date_wrap p a {
       color: #eee;
       text-decoration: none;
       text-transform: uppercase;
@@ -1412,7 +1422,7 @@ svg {
       -webkit-transition: all .3s ease;
       -o-transition: all .3s ease;
       transition: all .3s ease; }
-      .estel_tm_news_wrap .date_wrap p a:before {
+      .advantages-wrapper .date_wrap p a:before {
         position: absolute;
         content: "";
         width: 10px;
@@ -1421,14 +1431,15 @@ svg {
         top: 50%;
         right: 100%;
         margin-right: 8px; }
-      .estel_tm_news_wrap .date_wrap p a:hover {
+      .advantages-wrapper .date_wrap p a:hover {
         color: #ed2629; }
-  .estel_tm_news_wrap .definitions_wrap .definition {
+  .advantages-wrapper .definitions_wrap .definition {
     display: none;
     border: 1px solid rgba(255, 255, 255, 0.7);
     padding: 10px 15px;
     margin-bottom: 10px; }
-  .estel_tm_news_wrap .definition p {
+  .advantages-wrapper .definition p {
+    font-size: 0.9em;
     color: #fff; }
 
 .estel_tm_contact_wrap {
@@ -1511,32 +1522,31 @@ svg {
     margin-bottom: 7px;
     text-align: center; }
 
-.estel_tm_footer_wrap {
-  background-image: url(../images/bg.jpg);
+.footer-wrapper {
   width: 100%;
   background-position: center 45%;
   height: auto;
   clear: both;
   float: left;
   text-align: center;
-  background-color: #292929;
+  background-color: black;
   padding-bottom: 60px;
-  padding-top: 120px;
+  padding-top: 60px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .estel_tm_footer_wrap p {
+  .footer-wrapper p {
     color: #fff; }
-    .estel_tm_footer_wrap p a {
+    .footer-wrapper p a {
       color: #a446a7;
       font-family: Montserrat;
       font-weight: 600;
       -webkit-transition: all .3s ease;
       -o-transition: all .3s ease;
       transition: all .3s ease; }
-      .estel_tm_footer_wrap p a:hover {
+      .footer-wrapper p a:hover {
         text-decoration: none; }
 
-.estel_tm_footer_top_wrap {
+.footer-content {
   display: inline-block;
   text-align: left;
   width: 100%; }
@@ -1548,30 +1558,48 @@ svg {
   .footer_logo img {
     width: 140px; }
 
-.footer_menu {
-  width: 60%;
-  display: inline-block;
-  float: left; }
-  .footer_menu ul {
+.footer-about .footer-wrapper {
+  padding-bottom: 60px;
+  padding-top: 60px; }
+
+.footer-about .footer_menu ul {
+  position: relative;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2; }
+  .footer-about .footer_menu ul li {
     position: relative;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2; }
-    .footer_menu ul li {
-      position: relative;
-      list-style-position: inside;
-      list-style-image: url("../images/list-icon-1.png"); }
-      .footer_menu ul li a {
-        color: #fff;
-        text-decoration: none; }
-        .footer_menu ul li a:hover {
-          text-decoration: underline;
-          color: #a446a7; }
-      .footer_menu ul li.active a {
+    list-style-position: inside;
+    list-style-image: url("../images/list-icon-1.png"); }
+    .footer-about .footer_menu ul li a {
+      color: #fff;
+      text-decoration: none; }
+      .footer-about .footer_menu ul li a:hover {
+        text-decoration: underline;
         color: #a446a7; }
+    .footer-about .footer_menu ul li.active a {
+      color: #a446a7; }
+
+.footer-catalog-article .footer_menu ul {
+  position: relative; }
+  .footer-catalog-article .footer_menu ul li {
+    position: relative;
+    display: inline-block;
+    list-style-position: inside; }
+    .footer-catalog-article .footer_menu ul li a {
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      padding: 15px 10px;
+      color: #fff;
+      text-decoration: none; }
+      .footer-catalog-article .footer_menu ul li a:hover {
+        text-decoration: underline;
+        color: #a446a7; }
+    .footer-catalog-article .footer_menu ul li.active a {
+      color: #a446a7; }
 
 .footer_phone {
-  margin-top: 35px;
   width: 20%;
   display: inline-block;
   float: left;
@@ -1965,6 +1993,24 @@ input:focus {
 [role='button']:hover {
   cursor: pointer; }
 
+h3 {
+  text-transform: uppercase; }
+
+a {
+  text-decoration: none; }
+
+.btn-def span {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 35px;
+  display: inline-block;
+  font-weight: 500;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+
 /*---------------------------------------------------*/
 /*	16) ESTEL MEDIA QUERIES (FOR SMALL DEVIVES)
 /*---------------------------------------------------*/
@@ -2111,11 +2157,11 @@ input:focus {
     right: 0px; }
   .estel_tm_discover_wrap {
     right: 12px; }
-  .estel_tm_news_wrap .date_wrap p {
+  .advantages-wrapper .date_wrap p {
     font-size: 13px; }
-  .estel_tm_news_wrap .date_wrap p a {
+  .advantages-wrapper .date_wrap p a {
     font-size: 13px; }
-  .estel_tm_news_wrap .title_holder h3 a {
+  .advantages-wrapper .title_holder h3 a {
     font-size: 20px; }
   .estel_tm_main_title_holder_wrap .number_wrap {
     width: 115px;

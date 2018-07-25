@@ -398,16 +398,18 @@ function estel_tm_text_animation(){
 	
 	"use strict";
 	
-	var H        			= jQuery(window).height();
-	var titleHolder			= jQuery('.estel_tm_universal_box_wrap .hero_title, .estel_tm_universal_box_wrap .hero_form');
-	var titleHeight			= titleHolder.outerHeight();
-	var headerHeight		= jQuery('.estel_tm_header').outerHeight();
+	var H        						= jQuery(window).height();
+	var titleHolder					= jQuery('.estel_tm_universal_box_wrap .hero_title, .estel_tm_universal_box_wrap .hero_form');
+	var titleHolderOpacity	= jQuery('.estel_tm_universal_box_wrap .guitar_hero');
+	var titleHeight					= titleHolder.outerHeight();
+	var headerHeight				= jQuery('.estel_tm_header').outerHeight();
 	
 	var	height				= H/2 + titleHeight/2 - headerHeight;
 	
 	jQuery(window).on('scroll',function(){
 		var window_offset = jQuery(window).scrollTop();
 		titleHolder.css({opacity:1 - (window_offset/height), marginTop:(window_offset/height)*200});
+		titleHolderOpacity.css({opacity:1 - (window_offset/height)});
 	});
 }
 

@@ -10,7 +10,6 @@ $black_95: rgba(0,0,0,.95);
 $white_9: rgba(255,255,255,.09);
 $black_20: rgba(0, 0, 0, 0.2);
 $color_dove_gray_approx: #6b6b6b;
-$color_cardinal_pink_approx: #801671;
 $black_30: rgba(0, 0, 0, 0.3);
 $color_black_approx: #010101;
 $color_log_cabin_20_approx: rgba(32, 32, 32, 0.2);
@@ -32,10 +31,24 @@ $color_monza_20_approx: rgba(188,1,39,.2);
 $color-1: #a446a7;
 $color-2: darken(#a446a7, 20%);
 $color-3: #e958d6;
+$color-4: #801671;
+
 $color-gray-1: #787878;
 .color-1{color: $color-1;}
 .color-2{color: $color-2;}
 .color-3{color: $color-3;}
+.color-4{color: $color-4;}
+
+$bg-color-1: #a446a7;
+$bg-color-2: darken(#a446a7, 20%);
+$bg-color-3: #e958d6;
+$bg-color-4: #801671;
+
+.bg-color-1{background-color: $bg-color-1;}
+.bg-color-2{background-color: $bg-color-2;}
+.bg-color-3{background-color: $bg-color-3;}
+.bg-color-4{background-color: $bg-color-4;}
+
 
 .parag-gray{
 	p{
@@ -49,10 +62,8 @@ $font_2: xcon;
 $font_3: Times New Roman;
 
 //urls
-$url_0: url(../images/slide-1.jpg);
 $url_1: url(../img/about/1.jpg);
 $url_2: url(../img/jarallax/1.jpg);
-$url_3: url(../images/bg.jpg);
 $url_4: url(../img/about/2.jpg);
 $url_5: url(../img/hero/1.jpg);
 
@@ -178,7 +189,7 @@ svg {
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
 	&.scroll {
-		background-color: $black_90;
+		background-color: #78379f;
 		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		box-shadow: 0 1px 3px $black_15;
 		.estel_tm_navigation_wrap {
@@ -592,9 +603,6 @@ svg {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		&.hero {
-			background-image: $url_0;
-		}
 		&.testimonial {
 			background-image: $url_2;
 		}
@@ -615,6 +623,9 @@ svg {
 			background-size: cover;
 			object-fit: cover;
 		}
+	}
+	.btn-def{
+		//position: absolute;
 	}
 	.overlay_color {
 		position: absolute;
@@ -738,8 +749,8 @@ svg {
 			font-family: $font_2;
 			font-size: 26px;
 			line-height: 31px;
-			color: $color_cardinal_pink_approx;
-			border: 1px solid $color_cardinal_pink_approx;
+			color: $color-4;
+			border: 1px solid $color-4;
 			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 			border-radius: 100%;
 			/* animation: secdownmoving 1000ms linear 0s infinite; */
@@ -821,8 +832,8 @@ svg {
 	}
 }
 .btn_form {
-	background: $color_cardinal_pink_approx;
-	border: 1px solid $color_cardinal_pink_approx;
+	background: $color-4;
+	border: 1px solid $color-4;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 25px;
 	color: $white;
@@ -834,7 +845,7 @@ svg {
 	&:hover {
 		background: $white;
 		border: 1px solid $white;
-		color: $color_cardinal_pink_approx;
+		color: $color-4;
 	}
 }
 .estel_tm_about_wrap {
@@ -1123,7 +1134,7 @@ svg {
 	height: auto;
 	clear: both;
 	float: left;
-	margin-top: 60px;
+	margin-top: 75px;
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
 	> ul.total {
@@ -1150,15 +1161,14 @@ svg {
 			&:hover .inner_list {
 				border: 1px solid $color_cardinal_pink_20_approx;
 				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-				box-shadow: 0 0 15px $color_cardinal_pink_20_approx;
 				.service_icon .service_icon_hover {
 					opacity: 1;
 				}
 				.service_title h3 {
-					color: $color_cardinal_pink_approx;
+					color: $color-4;
 				}
 				.service_definition p {
-					color: $color_cardinal_pink_approx;
+					color: $color-4;
 				}
 			}
 		}
@@ -1532,12 +1542,12 @@ svg {
 
 
 
-.estel_tm_section_news {
+.advantages {
 	//height: 100vh;
-	min-height: 100vh;
+	min-height: 85vh;
 	//transition: all 0.3s ease;
 	//background: $white;
-	background-color: #333;
+	background-color: black;
 	position: relative;
 	.bg-wrapper{
 		pointer-events: none;
@@ -1548,7 +1558,6 @@ svg {
 		right: 0;
 		bottom: 0;
 		//transition: all 0.3s ease;
-		background-image: $url_3;
 		background-position: center top;
 		background-size: 100%;
 		background-repeat: no-repeat;
@@ -1569,7 +1578,7 @@ svg {
 	}
 
 }
-.estel_tm_section_news_overlay {
+.advantages_overlay {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -1585,7 +1594,7 @@ svg {
 		background: $black_20;
 	}
 }
-.estel_tm_news_wrap {
+.advantages-wrapper {
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1652,7 +1661,7 @@ svg {
 			color: $white;
 			text-decoration: none;
 			text-transform: uppercase;
-			background-color: $color_cannon_pink_approx;
+			background-color: $color-4;
 			padding: 7px 35px;
 			display: inline-block;
 			font-weight: 500;
@@ -1703,6 +1712,7 @@ svg {
 		//overflow-y: scroll;
 		//overflow: auto;
 		p{
+			font-size: 0.9em;
 			color: $white;
 		}
 	}
@@ -1830,17 +1840,16 @@ svg {
 }
 
 //footer
-.estel_tm_footer_wrap {
-	background-image: $url_3;
+.footer-wrapper {
 	width: 100%;
 	background-position: center 45%;
 	height: auto;
 	clear: both;
 	float: left;
 	text-align: center;
-	background-color: $color_shark_approx;
+	background-color: black;
 	padding-bottom: 60px;
-	padding-top: 120px;
+	padding-top: 60px;
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
 	p {
@@ -1858,7 +1867,9 @@ svg {
 		}
 	}
 }
-.estel_tm_footer_top_wrap {
+
+
+.footer-content {
 	display: inline-block;
 	text-align:left;
 	width: 100%;
@@ -1871,34 +1882,63 @@ svg {
 		width: 140px;
 	}
 }
-.footer_menu {
-	width: 60%;
-	display: inline-block;
-	float: left;
-	ul {
-		position: relative;
-		column-count: 2;
-		li {
+.footer-about{
+	.footer-wrapper{
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+	.footer_menu {
+		ul {
 			position: relative;
-			list-style-position: inside;
-			list-style-image: url('../images/list-icon-1.png');
-			//margin-right: 15px;
-			a {
-				color: $white;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
+			column-count: 2;
+			li {
+				position: relative;
+				list-style-position: inside;
+				list-style-image: url('../images/list-icon-1.png');
+				//margin-right: 15px;
+				a {
+					color: $white;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+						color: $color-1;
+					}
+				}
+				&.active a {
 					color: $color-1;
 				}
-			}
-			&.active a {
-				color: $color-1;
 			}
 		}
 	}
 }
+.footer-catalog-article{
+	.footer_menu {		
+		ul {
+			position: relative;
+			li {
+				position: relative;
+				display: inline-block;
+				list-style-position: inside;
+				//margin-right: 15px;
+				a {
+					transition: all 0.3s ease;
+					padding: 15px 10px;
+					color: $white;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+						color: $color-1;
+					}
+				}
+				&.active a {
+					color: $color-1;
+				}
+			}
+		}
+	}
+}
+
 .footer_phone {
-	margin-top: 35px;
 	width: 20%;
 	display: inline-block;
 	float: left;
@@ -1969,6 +2009,20 @@ svg {
 .typed-cursor {
 	color: $black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .estel_tm_intro_universal_bg_wrap {
 	width: 100%;
 	height: auto;
@@ -2339,8 +2393,26 @@ input{
 		cursor: pointer	;
 	}
 }
-
-
+h3{
+	text-transform: uppercase;
+}
+a{
+	text-decoration: none;
+}
+.btn-def {
+	span {
+		color: $white;
+		text-decoration: none;
+		padding: 7px 35px;
+		display: inline-block;
+		font-weight: 500;
+		border-radius: 25px;
+		transition: all .3s ease;
+	}
+	a:hover {
+		//background-color: $color_fuscous_gray_approx;
+	}
+}
 
 
 
@@ -2426,9 +2498,9 @@ input{
 	.estel_tm_portfolio_list > li{width: 100%;padding-left: 0px;}
 	.estel_tm_to_top_wrap{right: 0px;}
 	.estel_tm_discover_wrap{right: 12px;}
-	.estel_tm_news_wrap .date_wrap p{font-size: 13px;}
-	.estel_tm_news_wrap .date_wrap p a{font-size: 13px;}
-	.estel_tm_news_wrap .title_holder h3 a{font-size: 20px;}
+	.advantages-wrapper .date_wrap p{font-size: 13px;}
+	.advantages-wrapper .date_wrap p a{font-size: 13px;}
+	.advantages-wrapper .title_holder h3 a{font-size: 20px;}
 	.estel_tm_main_title_holder_wrap .number_wrap{width: 115px;height: 60px;line-height: 60px;}
 	.estel_tm_main_title_holder_wrap .number_wrap span{font-size: 32px;}
 	.estel_tm_main_title_holder_wrap .title_wrap span{font-size: 32px;}
